@@ -8,17 +8,23 @@ const pis = 1.86  / 100
 const cofins =8.54  / 100
 const valorUnitario = 4.50
 const valorBruto = quantidade * valorUnitario
-console.log(valorBruto)
  const impostoDeIcms = icms * valorBruto
  const impostoDeIpi = ipi * valorBruto
  const impostoDePis = pis * valorBruto
  const impostoDeCofins = cofins * valorBruto
  const somaTotal = impostoDeIcms + impostoDeIpi + impostoDePis + impostoDeCofins + valorBruto
- console.log(somaTotal)
-//  console.log(impostoDeIcms)
+ const somaImposto = impostoDeCofins + impostoDeIcms + impostoDePis + impostoDeIpi
+ if(somaTotal > 6000){
+return `Total Impostos: ${somaImposto}  Total Mercadorias: ${quantidade} Total Geral:${somaTotal} PARABÉNS VOCÊ GANHOU UM DESCONTO DE 10% EM SUA PRÓXIMA COMPRA`
 }
- energetico(1000)
+return `Total Impostos: ${somaImposto}  Total Mercadorias: ${quantidade} Total Geral:${somaTotal}`
+}
+ console.log(energetico(50000))
  
+//Esta empresa deseja dar uma bonificação/desconto, mas não sabe como bonificar os clientes que compraram grandes quantidades.
+//Como questão bônus (não obrigatória), você pode sugerir um algoritmo para ajudar a bonificar os clientes.
+
+
  
  
  
